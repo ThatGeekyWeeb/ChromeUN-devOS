@@ -9,7 +9,7 @@ With the release of ChromeOS 77.X many devices recived the *End Of Support* Noti
 
 ### Broken Update?
 >
-Devices labeled as *unsupported* we're meant to recive ChromeOS 76.X as there final Update, but most didn't!\
+Devices labeled as *unsupported* we're meant to recive ChromeOS 77.X as there final Update, but most didn't!\
 While devices would be *prompted*  to Update, the *Check For Update* button was removed, when devices we're labeled as *Unsupported*
 
 >![Updatepromt](https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/Screenshot%202020-04-29%20at%205.55.12%20PM.png)
@@ -28,9 +28,11 @@ Using DevMode, we can override the update process and force it to become the ope
 
 1. DevMode
      * [esc + F3 (refresh) + power]
-    ![DevMode]
-(https://beebom.com/wp-content/uploads/2019/12/Turn-On-Chromebook-Developer-Mode-2.jpg)
+     
+    ![DevMode](https://beebom.com/wp-content/uploads/2019/12/Turn-On-Chromebook-Developer-Mode-2.jpg)
      * [ctrl + d]
+     
+     ![DevModCon](https://www.servethehome.com/wp-content/uploads/2018/03/Google-Chrome-OS-Turn-OS-Verification-Off.jpg)
      * [enter]
      * [ctrl + d]
 > 1a. Transition
