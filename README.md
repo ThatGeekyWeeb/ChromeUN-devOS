@@ -27,10 +27,12 @@ Using DevMode, we can override the update process and force it to become the ope
 ## DevMode
 
 1. DevMode
-    * [esc + F3 (refresh) + power]
-    * [ctrl + d]
-    * [enter]
-    * [ctrl + d]
+     * [esc + F3 (refresh) + power]
+    ![DevMode]
+(https://beebom.com/wp-content/uploads/2019/12/Turn-On-Chromebook-Developer-Mode-2.jpg)
+     * [ctrl + d]
+     * [enter]
+     * [ctrl + d]
 > 1a. Transition
    >  * The Transition to developer mode can somtimes freeze! (Spin Wheel isn't animated = Frozen)
    >  * Simpy reboot the device ([F3/Refesh + Power])
