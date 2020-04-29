@@ -32,7 +32,7 @@ Using DevMode, we can override the update process and force it to become the poe
    * enter\
    * ctrl + d\
 > 1a. Transition\
-   > The Transition to developer mode can somtimes freeze! (Spin Wheel isn't animated = Frozen)\
-   > Simpy reboot the device (F3/Refesh + Power)\
-   > Starts Again!\
+   >  The Transition to developer mode can somtimes freeze! (Spin Wheel isn't animated = Frozen)\
+   >  Simpy reboot the device (F3/Refesh + Power)\
+   >  Starts Again!\
 2. 
