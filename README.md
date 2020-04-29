@@ -29,10 +29,10 @@ Using DevMode, we can override the update process and force it to become the ope
 1. DevMode
      * [esc + F3 (refresh) + power]
      
-    ![DevMode](https://beebom.com/wp-content/uploads/2019/12/Turn-On-Chromebook-Developer-Mode-2.jpg)
+    ![DevMode](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/68747470733a2f2f626565626f6d2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031392f31322f5475726e2d4f6e2d4368726f6d65626f6f6.jpeg?raw=true)
      * [ctrl + d]
      
-     ![DevModCon](https://www.servethehome.com/wp-content/uploads/2018/03/Google-Chrome-OS-Turn-OS-Verification-Off.jpg)
+     ![DevModCom](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/68747470733a2f2f7777772e7365727665746865686f6d652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30332f476f6f676c652d4.jpeg?raw=true)
      * [enter]
      * [ctrl + d]
 > 1a. Transition
