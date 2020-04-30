@@ -103,21 +103,21 @@ Using DevMode, we can override the update process and force it to become the ope
         
 # Issues
 
-###### Bug 1X1:
+###### [Bug 1X1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1):
 ***`ChromeOS halt error > [Errno 28] No space left on device
 (Error caused by /dev/root being </=1.2G)
 Prevents continued usage of emerge.
 Searching for a solution!`***
 
-###### Bug 1X2:
+###### [Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/20):
 ***`rm /usr/lib/*`*** ***`may break sudo, Issue results in broken system!`***
 # Testing
 ### Custom make.defaults
 
 Patching the orginal make.defaults (/etc/portage/make.profile/make.defaults)\
 With my custom built one, should make portage use *drivefs* (GoogleDrive mount)\
-This should fix Bug [1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)\
-> Additionally, if the users device has more than 15GB, make.defaults can be edited to use the *homedir* (/home/user/'*') *: /home/user/'encryptitionkey'/
+This should fix [Bug 1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
+> Additionally, if the users device has more than 15GB, make.defaults can be edited to use the *homedir* (/home/user/'*') *: /home/user/'encryptitionkey'
     
 1. Patch
     * curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults
