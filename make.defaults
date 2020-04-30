@@ -9,7 +9,7 @@
 
 # Point everything to /usr/local.
 
-HOMEUSER="/home/.shadow/<encryptkey>/mount/" 
+HOMEUSER="/home/.shadow/<encryptkey>/vault/" 
 
 # Setting HOMEUSER: as su run: ls /home/
 # Set HOMEUSER to the crypt value
