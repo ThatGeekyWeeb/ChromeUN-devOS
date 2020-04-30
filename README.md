@@ -77,7 +77,7 @@ Using DevMode, we can override the update process and force it to become the ope
       * `sudo su -`
         * `dev_install`
         * `rm /usr/local/portage/packages/* -r`
-        * `rm /usr/lib/*`
+        * `rm /usr/lib/*` **[Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)**
         * `mkdir /usr/lib/python-exec`
         * `echo '#!/bin/bash' > /usr/lib/python-exec/python-exec2-c`
         * `echo 'base=$(basename "$1")' >> /usr/lib/python-exec/python-exec2-c`
@@ -109,6 +109,8 @@ Using DevMode, we can override the update process and force it to become the ope
 Prevents continued usage of emerge.
 Searching for a solution!`***
 
+###### Bug 1X2:
+***`rm /usr/lib/*`*** ***`may break sudo, Issue results in broken system!`***
 # Testing
 ### Custom make.defaults
 
@@ -123,3 +125,4 @@ This should fix Bug [1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
     > ***Patching must be done BEFORE [`dev_install`](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/README.md#dev_install)is ran***
     
 - [ ] Test Custom make.defaults
+- [ ] Create /* tarball for easy fixes!
