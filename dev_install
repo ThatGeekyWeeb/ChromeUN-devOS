@@ -7,11 +7,11 @@
 # in developer mode. It also takes care of some configuration details
 # that arise from not havin write access to the root filesystem.
 
-HOMEUSER="/home/.shadow/c63d9ab87aa339209c9ed060de104e55ade6705c/vault/"
+HOMEUSER="/home/.shadow/<encryptkey>/vault/local/"
 
 # Constant definitions.
 P_CONFIG_CROS=/etc/portage
-P_CONFIG_DEVELOPER=/usr/local/etc/portage
+P_CONFIG_DEVELOPER=${HOMEUSER}local/etc/portage
 EMERGE_PACKAGES="/usr/share/dev-install/bootstrap.packages"
 
 # The base URL of the repository holding our portage prebuilt binpkgs.
@@ -75,6 +75,8 @@ remove_installed_packages() {
   if yes_or_no "Remove all installed packages now"; then
     rm -rf --one-file-system /usr/local/*
     rm -rf --one-file-system ${HOMEUSER}/*
+    mkdir ${HOMEUSER}/share/
+    ln -s /usr/share/portage/ ${HOMEUSER}/share/
     echo "Removed all installed packages."
   else
     echo "Operation cancelled."
@@ -135,6 +137,10 @@ download_bootstrap_packages() {
     fi
   done < "${EMERGE_PACKAGES}"
 }
+
+# Add HOMEUSER to path
+
+# export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin;/home/.shadow/d35a982ee6d921181f5c3ba8e1a9f73234006c75/vault/dev/bin/
 
 # Configure emerge in /usr/local.
 configure_emerge() {
@@ -284,6 +290,7 @@ main() {
 
   echo "dev_install done. Enjoy!"
   echo "/usr/local/ = ${HOMEUSER}/"
+  cp /usr/local/etc/* /etc/ -r
 }
 
 main
