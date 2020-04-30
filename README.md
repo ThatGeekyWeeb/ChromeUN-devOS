@@ -116,7 +116,11 @@ This should fix [Bug 1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
     * curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults
     * cp ./make.defaults /etc/portage/make.profile/
     > ***Patching must be done BEFORE [`dev_install`](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/README.md#dev_install)is ran***
-    
+
+### Python
+
+**[Python-exec bug](https://bugs.chromium.org/p/chromium/issues/detail?id=842039)**
+
 - [x] Test Custom make.defaults > [Test Results](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
-- [x] Fix [Bug 1X3] symlink (soft link) creates dir in Downloads/
-- [ ] Create /* tarball for easy fixes!
+- [ ] Create /usr/lib/ tarball for easy fixes!
+- [x] Add python-exec link
