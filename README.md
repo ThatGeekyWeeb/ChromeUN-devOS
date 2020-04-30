@@ -107,3 +107,6 @@ ChromeOS halt error > [Errno 28] No space left on device
 (Error caused by /dev/root being </=1.2G)
 Prevents continued usage of emerge.
 Searching for a solution!`***
+
+# Testing
+### Custom make.defaults
