@@ -9,7 +9,7 @@
 
 # Point everything to /usr/local.
 
-HOMEUSER="/media/fuse/driverfs-*/root" 
+HOMEUSER="/home/user/<encryption>/Downloads/" 
 
 # Setting HOMEUSER: as su run: ls /home/
 # Set HOMEUSER to the crypt value
