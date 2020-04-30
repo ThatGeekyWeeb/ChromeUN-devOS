@@ -9,7 +9,7 @@
 
 # Point everything to /usr/local.
 
-HOMEUSER="/home/user/<encryption>/Downloads/" 
+HOMEUSER="/home/.shadow/<encryptkey>/mount/" 
 
 # Setting HOMEUSER: as su run: ls /home/
 # Set HOMEUSER to the crypt value
