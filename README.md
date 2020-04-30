@@ -102,11 +102,16 @@ Using DevMode, we can override the update process and force it to become the ope
         > visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
 # Issues
-***`
-ChromeOS halt error > [Errno 28] No space left on device
+
+###### Bug 1X1:
+***`ChromeOS halt error > [Errno 28] No space left on device
 (Error caused by /dev/root being </=1.2G)
 Prevents continued usage of emerge.
 Searching for a solution!`***
 
 # Testing
 ### Custom make.defaults
+
+Patching the orginal make.defaults (/etc/portage/make.profile/make.defaults)\
+With my custom built one, should make portage use *drivefs* (GoogleDrive mount)\
+This shoudl fix Bug [1x1](
