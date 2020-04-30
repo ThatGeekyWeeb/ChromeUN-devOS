@@ -114,4 +114,10 @@ Searching for a solution!`***
 
 Patching the orginal make.defaults (/etc/portage/make.profile/make.defaults)\
 With my custom built one, should make portage use *drivefs* (GoogleDrive mount)\
-This shoudl fix Bug [1x1](
+This should fix Bug [1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)\
+> Additionally, if the users device has more than 15GB, make.defaults can be edited to use the *homedir* (/home/user/'*') *: /home/user/<encryptitionkey>/
+    
+1. Patch
+    * curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults
+    * cp ./make.defaults /etc/portage/make.profile/
+    > ***Patching must be done BEFORE `dev_install` is ran***
