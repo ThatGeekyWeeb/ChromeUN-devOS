@@ -29,7 +29,7 @@ PORTAGE_TMPDIR="${ROOT}/var/tmp"
 
 BUILD_PREFIX="${ROOT}/var/tmp/portage"
 
-CONFIG_PROTECT="/usr/local/share/portage"
+CONFIG_PROTECT="${ROOT}/share/portage"
 
 PORTAGE_WORKDIR_MODE="0700"
 
