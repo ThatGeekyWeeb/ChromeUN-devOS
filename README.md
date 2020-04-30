@@ -52,6 +52,8 @@ Using DevMode, we can override the update process and force it to become the ope
   
   > *Press "[ctrl + d]" to enter Developer Mode!*
   
+### rw_rootfs
+  
 3. RW rootfs
       * [ctrl + alt + t]
       * `shell`
@@ -61,6 +63,9 @@ Using DevMode, we can override the update process and force it to become the ope
         * `./make_dev_ssd.sh --remove_rootfs_verification --partitions 2`
         * `sudo reboot`
       * [ctrl + d]
+      > Must be done each reset!
+
+### remount
 
 4. Remount
     * [ctrl + alt + t]
@@ -68,6 +73,7 @@ Using DevMode, we can override the update process and force it to become the ope
     * `sudo su -`
         * `mount -o remount,rw /`
         * `mount -o remount,exec /mnt/stateful_partition`
+    > Must be done each reboot!
 
 ### dev_install 
 
@@ -75,16 +81,21 @@ Using DevMode, we can override the update process and force it to become the ope
       * [ctrl + alt + t]
       * `shell`
       * `sudo su -`
-        * `cd /etc/portage/make.profile`
-        * `curl -LO https://github.com/ssfgames13/ChromeUN-devOS/blob/master/make.default`
-        * <dev_install>
+        * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults`
+        * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/dev_install`
+        * `ln -s /usr/local /home/.shadow/<encryptkey>/vault/`
+        * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/python-exec2-c`
+        * `mkdir /usr/lib/python-exec`
+        * `cp ./python-exec2-c /usr/lib/python-exec`
+        * `cp ./make.defaults /etc/portage/make.profile/`
+        * `cp ./dev_install /usr/bin/dev_install`
         * `dev_install`
-        * `rm /home/.shadow/c63d9ab87aa339209c9ed060de104e55ade6705c/vault/portage/packages/* -r`
+        * `rm /home/.shadow/<encryptkey>/vault/local/portage/packages/* -r`
         * `rm /usr/lib/python-exec/ -rf`
-        * `cp /home/.shadow/c63d9ab87aa339209c9ed060de104e55ade6705c/vault/lib/python-exec/ /usr/lib/python-exec/ -r`
-        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python2.7`
-        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python2`
-        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python`
+        * `cp /home/.shadow/<encryptkey>/vault/local/lib/python-exec/ /usr/lib/python-exec/ -r`
+        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2.7`
+        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2`
+        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python`
         * `dev_install --reinstall --yes`
         * `emerge nano`
         * `emerge wget`
@@ -99,28 +110,13 @@ Using DevMode, we can override the update process and force it to become the ope
         > Haven't used Gentoo/Emerge before?\
         > Visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
-# Issues
-
-###### [Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/20):
-***`rm /usr/lib/*`*** ***`May break sudo, Issue results in broken system!`***
-
-# Testing
-### Custom make.defaults
-
-Patching the orginal make.defaults (/etc/portage/make.profile/make.defaults)\
-With my custom built one, should make portage use *drivefs* (GoogleDrive mount)\
-This should fix [Bug 1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
-> Additionally, if the users device has more than 15GB, make.defaults can be edited to use the *homedir* (/home/user/'*') *: /home/user/'encryptitionkey'
-    
-1. Patch
-    * curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults
-    * cp ./make.defaults /etc/portage/make.profile/
-    > ***Patching must be done BEFORE [`dev_install`](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/README.md#dev_install)is ran***
-
 ### Python
 
 **[Python-exec bug](https://bugs.chromium.org/p/chromium/issues/detail?id=842039)**
 
+## To_Do:
+
 - [x] Test Custom make.defaults > [Test Results](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
-- [ ] Create /usr/lib/ tarball for easy fixes!
+- [ ] Create /usr/lib/* tarball for easy fixes! [Bug 1x2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)
 - [x] Add python-exec link
+- [x] Create /usr/share/* tarball > [Bug 2x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/3)
