@@ -9,13 +9,13 @@
 
 # Point everything to /usr/local.
 
-HOMEUSER="/home/.shadow/<encryptkey>/vault/" 
+HOMEUSER="/home/.shadow/d35a982ee6d921181f5c3ba8e1a9f73234006c75/vault/local" 
 
 # Setting HOMEUSER: as su run: ls /home/
 # Set HOMEUSER to the crypt value
 # For added space set HOMEUSER to drivefs (/media/fuse/drivefs*)
 
-ROOT=${HOMEUSER}/
+ROOT=${HOMEUSER}
 
 PORTDIR="${ROOT}/portage"
 
