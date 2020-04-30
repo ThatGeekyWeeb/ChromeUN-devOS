@@ -75,24 +75,17 @@ Using DevMode, we can override the update process and force it to become the ope
       * [ctrl + alt + t]
       * `shell`
       * `sudo su -`
-        * `rm /home/user/<encryptkey>/Downloads
-        * `ln -s /usr/local /home/user/<encryptkey>/`
-        * `mv /home/user/<encyptkey>/local` **`mv /home/user/<encyptkey>/local` MUST not be `mv /home/user/<encyptkey>/local`*****`/`***
         * `cd /etc/portage/make.profile`
         * `curl -LO https://github.com/ssfgames13/ChromeUN-devOS/blob/master/make.default`
+        * <dev_install>
         * `dev_install`
-        * `rm /usr/local/portage/packages/* -r`
-        * ~~`rm /usr/lib/*`~~ **[Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)**
-        * ~~`mkdir /usr/lib/python-exec`~~
-        * ~~`echo '#!/bin/bash' > /usr/lib/python-exec/python-exec2-c`~~
-        * ~~`echo 'base=$(basename "$1")' >> /usr/lib/python-exec/python-exec2-c`~~
-        * ~~`echo 'shift' >> /usr/lib/python-exec/python-exec2-c`~~
-        * ~~```echo 'exec /usr/local/bin/python2.7 /usr/local/lib/python-exec/python2.7/"$base" "$@"' >> /usr/lib/python-exec/python-exec2-c```~~
-        * ~~`chmod 755 /usr/lib/python-exec/python-exec2-c`~~
-        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python2.7`~~
-        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python2`~~
-        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python`~~
-        * ~~`dev_install --reinstall --yes`~~
+        * `rm /home/.shadow/c63d9ab87aa339209c9ed060de104e55ade6705c/vault/portage/packages/* -r`
+        * `rm /usr/lib/python-exec/ -rf`
+        * `cp /home/.shadow/c63d9ab87aa339209c9ed060de104e55ade6705c/vault/lib/python-exec/ /usr/lib/python-exec/ -r`
+        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python2.7`
+        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python2`
+        * `ln -s /home/.shadow/<encryptkey>/vault/Downloads/bin/python2.7 /usr/bin/python`
+        * `dev_install --reinstall --yes`
         * `emerge nano`
         * `emerge wget`
         * `emerge @world`
