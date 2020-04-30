@@ -101,6 +101,9 @@ Using DevMode, we can override the update process and force it to become the ope
         > Haven't used Gentoo/Emerge before?\
         > visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
-## Emerge?
-
-`dev_install` installs *emerge*
+# Issues
+***`
+ChromeOS halt error > [Errno 28] No space left on device
+(Error caused by /dev/root being </=1.2G)
+Prevents continued usage of emerge.
+Searching for a solution!`***
