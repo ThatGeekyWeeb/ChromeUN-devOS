@@ -122,4 +122,4 @@ This should fix Bug [1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
     * cp ./make.defaults /etc/portage/make.profile/
     > ***Patching must be done BEFORE [`dev_install`](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/README.md#dev_install)is ran***
     
-[] Test Custom make.defaults
+- [ ] Test Custom make.defaults
