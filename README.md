@@ -75,19 +75,24 @@ Using DevMode, we can override the update process and force it to become the ope
       * [ctrl + alt + t]
       * `shell`
       * `sudo su -`
+        * `rm /home/user/<encryptkey>/Downloads
+        * `ln -s /usr/local /home/user/<encryptkey>/`
+        * `mv /home/user/<encyptkey>/local` **`mv /home/user/<encyptkey>/local` MUST not be `mv /home/user/<encyptkey>/local`*****`/`***
+        * `cd /etc/portage/make.profile`
+        * `curl -LO https://github.com/ssfgames13/ChromeUN-devOS/blob/master/make.default`
         * `dev_install`
         * `rm /usr/local/portage/packages/* -r`
-        * `rm /usr/lib/*` **[Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)**
-        * `mkdir /usr/lib/python-exec`
-        * `echo '#!/bin/bash' > /usr/lib/python-exec/python-exec2-c`
-        * `echo 'base=$(basename "$1")' >> /usr/lib/python-exec/python-exec2-c`
-        * `echo 'shift' >> /usr/lib/python-exec/python-exec2-c`
-        * ```echo 'exec /usr/local/bin/python2.7 /usr/local/lib/python-exec/python2.7/"$base" "$@"' >> /usr/lib/python-exec/python-exec2-c```
-        * `chmod 755 /usr/lib/python-exec/python-exec2-c`
-        * `ln -s /usr/local/bin/python2.7 /usr/bin/python2.7`
-        * `ln -s /usr/local/bin/python2.7 /usr/bin/python2`
-        * `ln -s /usr/local/bin/python2.7 /usr/bin/python`
-        * `dev_install --reinstall --yes`
+        * ~~`rm /usr/lib/*`~~ **[Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)**
+        * ~~`mkdir /usr/lib/python-exec`~~
+        * ~~`echo '#!/bin/bash' > /usr/lib/python-exec/python-exec2-c`~~
+        * ~~`echo 'base=$(basename "$1")' >> /usr/lib/python-exec/python-exec2-c`~~
+        * ~~`echo 'shift' >> /usr/lib/python-exec/python-exec2-c`~~
+        * ~~```echo 'exec /usr/local/bin/python2.7 /usr/local/lib/python-exec/python2.7/"$base" "$@"' >> /usr/lib/python-exec/python-exec2-c```~~
+        * ~~`chmod 755 /usr/lib/python-exec/python-exec2-c`~~
+        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python2.7`~~
+        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python2`~~
+        * ~~`ln -s /usr/local/bin/python2.7 /usr/bin/python`~~
+        * ~~`dev_install --reinstall --yes`~~
         * `emerge nano`
         * `emerge wget`
         * `emerge @world`
@@ -99,18 +104,13 @@ Using DevMode, we can override the update process and force it to become the ope
         * `rm /tmp/* -rf`
         > emerge is now installed!\
         > Haven't used Gentoo/Emerge before?\
-        > visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
+        > Visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
 # Issues
 
-###### [Bug 1X1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1):
-***`ChromeOS halt error > [Errno 28] No space left on device
-(Error caused by /dev/root being </=1.2G)
-Prevents continued usage of emerge.
-Searching for a solution!`***
-
 ###### [Bug 1X2](https://github.com/ssfgames13/ChromeUN-devOS/issues/20):
-***`rm /usr/lib/*`*** ***`may break sudo, Issue results in broken system!`***
+***`rm /usr/lib/*`*** ***`May break sudo, Issue results in broken system!`***
+
 # Testing
 ### Custom make.defaults
 
@@ -125,4 +125,5 @@ This should fix [Bug 1x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
     > ***Patching must be done BEFORE [`dev_install`](https://github.com/ssfgames13/ChromeUN-devOS/blob/master/README.md#dev_install)is ran***
     
 - [x] Test Custom make.defaults > [Test Results](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
+- [x] Fix [Bug 1X3] symlink (soft link) creates dir in Downloads/
 - [ ] Create /* tarball for easy fixes!
