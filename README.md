@@ -94,11 +94,16 @@ Using DevMode, we can override the update process and force it to become the ope
         * `rm /usr/lib/python-exec/ -rf`
         * `cp /home/.shadow/<encryptkey>/vault/local/lib/python-exec/ /usr/lib/python-exec/ -r`
         * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2.7`
-        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2`
+        * `ln -s /home/.shadow/<encryptkey>/vault/local/bmkdir /usr/local/share2in/python2.7 /usr/bin/python2`
         * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python`
         * `dev_install --reinstall --yes`
         * `emerge nano`
         * `emerge wget`
+        * `cp /usr/share/* -rf /usr/local/share/`
+        * `mkdir /usr/local/share2`
+        * `mv /usr/local/share/* /usr/local/share2`
+        * `rm /usr/local/share -rf`
+        * `ln -s /usr/share/ /usr/local/`
         * `emerge @world`
         * `emerge -a virtual/target-os` [yes]
         * `emerge --root="$ROOT_FS_DIR" --root-deps=rdeps --usepkgonly virtual/target-os`
