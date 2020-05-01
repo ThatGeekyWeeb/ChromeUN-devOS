@@ -81,9 +81,13 @@ Using DevMode, we can override the update process and force it to become the ope
       * [ctrl + alt + t]
       * `shell`
       * `sudo su -`
+        > Copy custom configs!
         * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/make.defaults`
+        > Edit <encryptkey> to ur key `ls /home/user/` *Output is key!*
         * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/dev_install`
+        > Edit <encryptkey> to ur key `ls /home/user/` *Output is key!*
         * `ln -s /usr/local /home/.shadow/<encryptkey>/vault/`
+        > `ls /home/user/` *Output is key!*
         * `curl -LO https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/python-exec2-c`
         * `mkdir /usr/lib/python-exec`
         * `cp ./python-exec2-c /usr/lib/python-exec`
@@ -91,19 +95,31 @@ Using DevMode, we can override the update process and force it to become the ope
         * `cp ./dev_install /usr/bin/dev_install`
         * `dev_install`
         * `rm /home/.shadow/<encryptkey>/vault/local/portage/packages/* -r`
-        * `rm /usr/lib/python-exec/ -rf`
-        * `cp /home/.shadow/<encryptkey>/vault/local/lib/python-exec/ /usr/lib/python-exec/ -r`
-        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2.7`
-        * `ln -s /home/.shadow/<encryptkey>/vault/local/bmkdir /usr/local/share2in/python2.7 /usr/bin/python2`
-        * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python`
+        > Cleans package cache!
+            * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python2.7`
+            * `ln -s /home/.shadow/<encryptkey>/vault/local/bmkdir /usr/local/share2in/python2.7 /usr/bin/python2`
+            * `ln -s /home/.shadow/<encryptkey>/vault/local/bin/python2.7 /usr/bin/python`
+            > Links python
         * `dev_install --reinstall --yes`
-        * `emerge nano`
-        * `emerge wget`
+            * `emerge nano`
+            * `emerge wget`
+            > Basic packages (Optional)
         * `cp /usr/share/* -rf /usr/local/share/`
         * `mkdir /usr/local/share2`
         * `mv /usr/local/share/* /usr/local/share2`
         * `rm /usr/local/share -rf`
         * `ln -s /usr/share/ /usr/local/`
+        * `cp /usr/local/share2/* /usr/local/share -rf`
+        * `rm /usr/local/share2 -rf`
+        > Links /usr/share > /usr/local/share`
+        * `cp /usr/lib/* -rf /usr/local/lib/`
+        * `mkdir /usr/local/lib2`
+        * `mv /usr/local/lib/* /usr/local/lib2`
+        * `rm /usr/local/lib -rf`
+        * `ln -s /usr/lib/ /usr/local/`
+        * `cp /usr/local/lib2/* /usr/local/lib -rf`
+        * `rm /usr/local/lib2 -rf`
+        > Links /usr/lib > /usr/local/lib
         * `emerge @world`
         * `emerge -a virtual/target-os` [yes]
         * `emerge --root="$ROOT_FS_DIR" --root-deps=rdeps --usepkgonly virtual/target-os`
