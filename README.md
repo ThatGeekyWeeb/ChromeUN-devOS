@@ -104,6 +104,7 @@ Using DevMode, we can override the update process and force it to become the ope
             * `emerge nano`
             * `emerge wget`
             > Basic packages (Optional)
+        * `cp /usr/local/share/* /usr/share/ -rf`
         * `cp /usr/share/* -rf /usr/local/share/`
         * `mkdir /usr/local/share2`
         * `mv /usr/local/share/* /usr/local/share2`
@@ -112,6 +113,7 @@ Using DevMode, we can override the update process and force it to become the ope
         * `cp /usr/local/share2/* /usr/local/share -rf`
         * `rm /usr/local/share2 -rf`
         > Links /usr/share > /usr/local/share`
+        * `cp /usr/local/lib/* /usr/lib/ -rf`
         * `cp /usr/lib/* -rf /usr/local/lib/`
         * `mkdir /usr/local/lib2`
         * `mv /usr/local/lib/* /usr/local/lib2`
@@ -124,10 +126,12 @@ Using DevMode, we can override the update process and force it to become the ope
         * `emerge -a virtual/target-os` [yes]
         * `emerge --root="$ROOT_FS_DIR" --root-deps=rdeps --usepkgonly virtual/target-os`
         * `emerge busybox`
-        * `rm -rf /usr/local/portage/packages/*`
-        * `rm -rf /usr/local/var/tmp/portage/*`
-        * `rm /tmp/* -rf`
-        > emerge is now installed!\
+            * `rm -rf /usr/local/portage/packages/*`
+            * `rm -rf /usr/local/var/tmp/portage/*`
+            > Cleans cache
+        * `rm /tmp/* -rf`   
+            > Cleans /tmp
+        Emerge is now installed!\
         > Haven't used Gentoo/Emerge before?\
         > Visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
@@ -138,6 +142,7 @@ Using DevMode, we can override the update process and force it to become the ope
 ## To_Do:
 
 - [x] Test Custom make.defaults > [Test Results](https://github.com/ssfgames13/ChromeUN-devOS/issues/1)
-- [ ] Create /usr/lib/* tarball for easy fixes! [Bug 1x2](https://github.com/ssfgames13/ChromeUN-devOS/issues/2)
 - [x] Add python-exec link
 - [x] Create /usr/share/* tarball > [Bug 2x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/3)
+- [x] Link /usr/local > /home/.shadow/<encryptkey>/vault
+- [x] Link /usr/share & /usr/lib > /usr/local/share & /usr/local/lib
