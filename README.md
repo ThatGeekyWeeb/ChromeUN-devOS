@@ -131,7 +131,8 @@ Using DevMode, we can override the update process and force it to become the ope
             > Cleans cache
         * `rm /tmp/* -rf`   
             > Cleans /tmp
-        Emerge is now installed!\
+        
+        ***Emerge*** is now installed!
         > Haven't used Gentoo/Emerge before?\
         > Visit [Gentoo Wiki](https://wiki.gentoo.org/wiki/Portage#emerge)
         
@@ -146,3 +147,4 @@ Using DevMode, we can override the update process and force it to become the ope
 - [x] Create /usr/share/* tarball > [Bug 2x1](https://github.com/ssfgames13/ChromeUN-devOS/issues/3)
 - [x] Link /usr/local > /home/.shadow/<encryptkey>/vault
 - [x] Link /usr/share & /usr/lib > /usr/local/share & /usr/local/lib
+- [ ] Upload libpython2.7.so.X
