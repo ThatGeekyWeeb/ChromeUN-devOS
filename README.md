@@ -4,6 +4,8 @@ A guide to DEVOS (DEV MODE/dev_install) on Older *Unsupported* Chromebooks!
 ## Unsupported?
 >
 With the release of ChromeOS 77.X many devices recived the *End Of Support* Notice!
+\
+***Currently development of ChromeUN-devOS is paused***
 
 ![EndSupport](https://raw.githubusercontent.com/ssfgames13/ChromeUN-devOS/master/Screenshot%202020-04-29%20at%205.43.26%20PM.png)
 
